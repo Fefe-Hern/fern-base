@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './res/index.css';
 import registerServiceWorker from './registerServiceWorker';
-import AppRoutes from "./components/AppRoutes";
+import AppRouter from "./components/AppRouter";
 
-const element = <AppRoutes />;
+const startingElement = <AppRouter />;
 
-ReactDOM.render(element, document.getElementById('root'));
+ReactDOM.render(startingElement, document.getElementById('root'));
 registerServiceWorker();

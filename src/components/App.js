@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from '../res/logo.svg';
 import '../res/App.css';
 import Clock from "./Clock";
+import Link from "react-router-dom/es/Link";
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
           <Clock />
           <button onClick={activateLasers}>Activate Lasers</button>
           <a href="#blah" onClick={handleClick}>Click me</a>
+          <Link to={'/welcome'}>Welcome.</Link>
       </div>
     );
   }

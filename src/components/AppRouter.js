@@ -5,7 +5,7 @@ import React, { Component } from "react";
 import { BrowserRouter } from 'react-router-dom';
 import Layout from "./Layout";
 
-export default class AppRoutes extends Component {
+export default class AppRouter extends Component {
     render() {
         return (
         <BrowserRouter>
