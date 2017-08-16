@@ -4,6 +4,8 @@
 
 const path = require('path');
 
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 const config = {
     // Entry point where webpack should look for imported files.
     entry: "./src/index.js",
@@ -52,9 +54,14 @@ const config = {
                         loader: "sass-loader"
                     }
                 ]
+                //loader: ExtractTextPlugin.extract('css-loader!sass-loader')
             }
         ] // End rules
-    }
+    },
+
+    plugins: [
+        new ExtractTextPlugin('public/bundled.css', {allChunks: true})
+    ]
 };
 
 module.exports = config;

@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './res/index.css';
+import './res/style.css';
 import registerServiceWorker from './registerServiceWorker';
-import AppRouter from "./app/AppRouter";
+import Layout from "./app/Layout";
 
-const startingElement = <AppRouter />;
+const startingElement = <Layout />;
 
 ReactDOM.render(startingElement, document.getElementById('root'));
 registerServiceWorker();
