@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import logo from '../res/logo.svg';
-import '../res/components/App.css';
-import Clock from "../clock/";
+import logo from 'resources/logo.svg';
+import 'resources/scenes/Home/App.css';
+import Clock from "components/Clock";
 import Link from "react-router-dom/es/Link";
+import {computerOptions} from "./components/ComputerOptions";
 
-import {Button, Container, Header, Icon, Menu, Segment, Visibility} from 'semantic-ui-react';
+import {Button, Container, Dropdown, Header, Icon, Menu, Segment, Visibility} from 'semantic-ui-react';
 
 
 class App extends Component {
@@ -38,16 +39,16 @@ class App extends Component {
 
                         <Container text>
                             <Header
-                                as='h1'
-                                content='Imagine-a-Company'
-                                inverted
-                                style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '3em' }}
-                            />
-                            <Header
                                 as='h2'
-                                content='Do whatever you want when you want to.'
+                                content='A Computer For '
                                 inverted
                                 style={{ fontSize: '1.7em', fontWeight: 'normal' }}
+                            />
+                            <Dropdown
+                                fluid
+                                selection
+                                inverted
+                                options={computerOptions}
                             />
                             <Button primary size='huge'>
                                 Get Started

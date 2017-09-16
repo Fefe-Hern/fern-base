@@ -1,9 +1,7 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
-import App from "./App";
-import Welcome from "../welcome/index";
-import UserForm from "../userform";
-import NotFound from "./NotFound";
+import App from "../Home/App";
+import NotFound from "../Error/NotFound";
 
 class Routes extends React.Component {
     render () {
@@ -11,8 +9,7 @@ class Routes extends React.Component {
             <div className="app-content">
                 <Switch>
                     <Route exact path="/" component={App} />
-                    <Route path="/welcome" component={Welcome} />
-                    <Route path="/userform" component={UserForm} />
+                    {/* <Route path="/userform" component={UserForm} /> */}
                     <Route component={NotFound} />
                 </Switch>
             </div>

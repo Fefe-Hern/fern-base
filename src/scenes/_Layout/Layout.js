@@ -4,7 +4,9 @@
 import React, {Component} from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Routes from "./Routes";
-import '../res/components/Layout.css';
+import Side from "./Sidebar";
+
+import "../../resources/scenes/_Layout/Layout.css";
 //import Link from "react-router-dom/es/Link";
 
 import {
@@ -12,6 +14,7 @@ import {
     Container,
     Menu,
     Segment,
+    Sidebar,
     Visibility
 } from 'semantic-ui-react';
 
@@ -47,16 +50,20 @@ class Layout extends Component {
         return (
                 <div className="app-container">
                         { visible ? <FixedMenu /> : null}
-
-
-                        <main>
-                        <BrowserRouter>
-                            <Routes/>
-                        </BrowserRouter>
-                        </main>
-                        <footer>
-                            <p></p>
-                        </footer>
+                        <Sidebar.Pushable>
+                            <Side />
+                            <Sidebar.Pusher>
+                                <main>
+                                <BrowserRouter>
+                                    <Routes/>
+                                </BrowserRouter>
+                                </main>
+                                <footer>
+                                    <a href="/userform">This is a footer</a>
+                                    <p></p>
+                                </footer>
+                            </Sidebar.Pusher>
+                        </Sidebar.Pushable>
                 </div>
         );
     }

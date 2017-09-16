@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './res/style.css';
+import './resources/style.css';
 import registerServiceWorker from './registerServiceWorker';
-import Layout from "./app/Layout";
+import Layout from "./scenes/_Layout/Layout";
 
 const startingElement = <Layout />;
 
